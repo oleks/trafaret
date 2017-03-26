@@ -4,17 +4,19 @@
 .. image:: https://travis-ci.org/oleks/trafaret.svg?branch=python3
     :target: https://travis-ci.org/oleks/trafaret
 
-A fundamental tenet of ``trafaret`` is that the solution to a programming task
-usually adheres to one of a set of possible "templates".
+A fundamental tenet of ``trafaret`` is that the solution to a programming
+exercise usually adheres to one of a set of possible "templates".
 
 Using ``trafaret`` effectively requires you to be attentive: teachers readily
 undermine the creativity of their students, and pose overly liberal programming
-tasks, having an infeasible set of solutions. Despite these formal
-shortcomings, ``trafaret`` can help yield more uniform solutions, and can help
-students get started.
+exercises, having an infeasible set of solutions. This is why I use the word
+"exercise", rather than "task": to emphasize the ``trafaret`` is not
+well-suited for more open-ended programming tasks.
 
-``trafaret`` should not be used as the sole, or absolute measure of in-how-far
-a solution solves the given task.
+Despite these formal shortcomings, ``trafaret`` can help yield more uniform
+solutions, and can help students get started. ``trafaret`` should not be used
+as the sole, or absolute measure of in-how-far a solution solves the given
+task.
 
 Templates
 ---------
