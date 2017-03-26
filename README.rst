@@ -12,7 +12,7 @@ possible templates.
 Using ``trafaret`` effectively requires you to be attentive: teachers readily
 undermine the creativity of their students, and pose overly liberal programming
 exercises, having an infeasible set of solutions. This is why I use the word
-"exercise", rather than "task": to emphasize the ``trafaret`` is not
+"exercise", rather than "task": to emphasize that ``trafaret`` is not
 well-suited for more open-ended programming tasks.
 
 Despite these formal shortcomings, ``trafaret`` can help yield more uniform
