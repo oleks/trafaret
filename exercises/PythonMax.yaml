@@ -1,11 +1,36 @@
 text: |
 
-  # Implement `max` in Python
+  # Implement `argmax` in Python
 
-  Implement `max` in Python.
+  Implement `argmax` in Python.
 
-handout: >
-  from typing import List
+handout: |
+  from typing import Callable, List, TypeVar
 
-  def max(xs: List[int]) -> int:
+  A = TypeVar('A')
+
+  def argmax(f: Callable[[A], int], xs: Iterable[A]) -> int:
       ____Solution
+templates:
+  - kind: Solution
+    code:
+    - |
+      ____CheckLength
+      argmax = 0
+      maxval = f(xs[argmax])
+      for i, x in enumerate(xs[1:]):
+          fx = f(x)
+          if fx > maxval:
+              argmax = i
+              maxval = fx
+  - kind: Solution
+    code:
+    - |
+      ____CheckLength
+      evals = [(f(x), i) for i, x in enumerate(xs)]
+      return sorted(evals)[-1]
+  - kind: CheckLength
+    code:
+    - |
+      if len(xs) == 0:
+          raise ValueError()
