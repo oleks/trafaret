@@ -1,0 +1,24 @@
+from typing import Callable, List, TypeVar
+
+A = TypeVar('A')
+
+def argmax(f: Callable[[A], int], xs: Iterable[A]) -> int:
+    if len(xs) == 0:
+        raise ValueError()
+    argmax = 0
+    maxval = f(xs[argmax])
+    for i, x in enumerate(xs[1:]):
+        fx = f(x)
+        if fx > maxval:
+            argmax = i
+            maxval = fx
+---- OR ----
+from typing import Callable, List, TypeVar
+
+A = TypeVar('A')
+
+def argmax(f: Callable[[A], int], xs: Iterable[A]) -> int:
+    if len(xs) == 0:
+        raise ValueError()
+    evals = [(f(x), i) for i, x in enumerate(xs)]
+    return sorted(evals)[-1]
