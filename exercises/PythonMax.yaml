@@ -4,3 +4,8 @@ text: |
 
   Implement `max` in Python.
 
+handout: >
+  from typing import List
+
+  def max(xs: List[int]) -> int:
+      ____Solution
