@@ -5,7 +5,7 @@
     :target: https://travis-ci.org/oleks/trafaret
 
 A fundamental tenet of ``trafaret`` is that the solution to a programming
-exercise usually adheres to one of a set of possible "templates".
+exercise usually adheres to one of a set of possible templates.
 
 Using ``trafaret`` effectively requires you to be attentive: teachers readily
 undermine the creativity of their students, and pose overly liberal programming
