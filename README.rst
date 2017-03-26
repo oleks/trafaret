@@ -1,4 +1,4 @@
-``trafaret`` — Template-driven Programming Exercises
+``trafaret`` — Template-Driven Programming Exercises
 ====================================================
 
 .. image:: https://travis-ci.org/oleks/trafaret.svg?branch=python3
