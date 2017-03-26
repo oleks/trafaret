@@ -4,8 +4,9 @@
 .. image:: https://travis-ci.org/oleks/trafaret.svg?branch=python3
     :target: https://travis-ci.org/oleks/trafaret
 
-A fundamental tenet of ``trafaret`` is that the solution to a programming
-exercise usually adheres to one of a set of possible templates.
+The solution to a programming exercise usually adheres to one of a set of
+possible templates. ``trafaret`` helps you grade student submissions, when this
+is the case.
 
 Using ``trafaret`` effectively requires you to be attentive: teachers readily
 undermine the creativity of their students, and pose overly liberal programming
