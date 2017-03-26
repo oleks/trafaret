@@ -3,9 +3,8 @@ python:
   - "3.5"
   - "3.6"
 before_script:
-  - pip install mypy flake8
-  - python static_tests.py
+  - pip install mypy flake8 pytest
 script:
   - pip install .
-  - pip install pytest
+  - python static_tests.py
   - pytest
