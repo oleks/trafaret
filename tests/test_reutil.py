@@ -22,7 +22,7 @@ def match_transform(m: Match) -> List[OffsetToken]:
         return []
 
 
-def test_reutil(words: Pattern) -> None:
+def test_whitespace_split(words: Pattern) -> None:
     expected = [
             OffsetToken(0, 'a'),
             OffsetToken(2, 'b'),
