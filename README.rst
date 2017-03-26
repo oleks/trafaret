@@ -4,7 +4,7 @@
 .. image:: https://travis-ci.org/oleks/trafaret.svg?branch=python3
     :target: https://travis-ci.org/oleks/trafaret
 
-The solution to a programming exercise usually adheres to one of a set of
+The solution to a small programming exercise usually adheres to one of a set of
 possible templates.
 
 ``trafaret`` helps with grading, when this is the case.
