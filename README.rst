@@ -17,8 +17,7 @@ well-suited for more open-ended programming tasks.
 
 Despite these formal shortcomings, ``trafaret`` can help yield more uniform
 solutions, and can help students get started. ``trafaret`` should not be used
-as the sole, or absolute measure of in-how-far a solution solves the given
-task.
+as the sole judge of solution quality.
 
 Templates
 ---------
@@ -29,3 +28,6 @@ When it comes to programming, variations in the following are readily stripped:
 * Comments
 * Naming (up to alpha equivalence)
 * Order of certain groups of tokens (e.g., the order of functions in a module)
+
+In some cases, you might also want students to adhere to a style guide. This is
+beyond the scope of ``trafaret``: use a linter.
