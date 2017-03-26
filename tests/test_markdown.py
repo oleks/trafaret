@@ -17,11 +17,14 @@ def output_to_file(command: List[str], path: str) -> None:
 
 
 def test_show(out_dirpath: str) -> None:
-    yaml_path = os.path.join("exercises", "PythonMax.yaml")
+    basename = "PythonArgmax"
+
+    yaml_path = os.path.join("exercises", basename + ".yaml")
     data_dirpath = os.path.join("tests", "data")
 
-    md_path = os.path.join(data_dirpath, "PythonMax.md")
-    out_path = os.path.join(out_dirpath, "PythonMax.md")
+    md_name = basename + ".md"
+    md_path = os.path.join(data_dirpath, md_name)
+    out_path = os.path.join(out_dirpath, md_name)
 
     command = ["trafaret", "markdown", yaml_path]
     output_to_file(command, out_path)

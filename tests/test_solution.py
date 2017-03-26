@@ -17,13 +17,16 @@ def output_to_file(command: List[str], path: str) -> None:
 
 
 def test_solution(out_dirpath: str) -> None:
-    yaml_path = os.path.join("exercises", "PythonMax.yaml")
+    basename = "PythonArgmax"
+
+    yaml_path = os.path.join("exercises", basename + ".yaml")
     data_dirpath = os.path.join("tests", "data")
 
-    md_path = os.path.join(data_dirpath, "PythonMax.solutions.txt")
-    out_path = os.path.join(out_dirpath, "PythonMax.solutions.txt")
+    txt_name = basename + ".solutions.txt"
+    txt_path = os.path.join(data_dirpath, txt_name)
+    out_path = os.path.join(out_dirpath, txt_name)
 
     command = ["trafaret", "solution", yaml_path]
     output_to_file(command, out_path)
 
-    subprocess.check_call(["diff", "-ru", md_path, out_path])
+    subprocess.check_call(["diff", "-ru", txt_path, out_path])
