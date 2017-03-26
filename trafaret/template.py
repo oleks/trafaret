@@ -3,7 +3,9 @@ import re
 from typing import Any, Dict, List
 
 
-_TEMPLATE = re.compile(r'____([a-zA-Z0-9]+)')
+TemplateRegex = r'____([a-zA-Z0-9]+)'
+
+_TEMPLATE = re.compile(TemplateRegex)
 
 
 def todo(text: str) -> str:

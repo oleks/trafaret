@@ -1,11 +1,11 @@
 import re
 
 from trafaret.config import Config
-from trafaret.template import Templates
+from trafaret.template import TemplateRegex, Templates
 from typing import Iterable, Match
 
 _INDENTED_SUBCODE = re.compile(
-    r'^([ \t]*)(.*?)____([A-Za-z][A-Za-z0-9]*).*$',
+    r'^([ \t]*)(.*?)' + TemplateRegex + r'.*$',
     re.MULTILINE)
 
 
