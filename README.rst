@@ -1,9 +1,6 @@
 ``trafaret`` — Template-Driven Programming Exercises
 ====================================================
 
-.. image:: https://travis-ci.org/oleks/trafaret.svg?branch=python3
-    :target: https://travis-ci.org/oleks/trafaret
-
 The solution to a small programming exercise usually adheres to one of a set of
 possible templates.
 
@@ -19,6 +16,13 @@ Despite these formal shortcomings, ``trafaret`` can help you bootstrap your
 students.
 
 ``trafaret`` should not be used as the sole judge of solution quality.
+
+Project State
+-------------
+
+.. image:: https://travis-ci.org/oleks/trafaret.svg?branch=python3
+    :target: https://travis-ci.org/oleks/trafaret
+
 
 Templates
 ---------
