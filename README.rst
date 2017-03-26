@@ -5,8 +5,9 @@
     :target: https://travis-ci.org/oleks/trafaret
 
 The solution to a programming exercise usually adheres to one of a set of
-possible templates. ``trafaret`` helps you grade student submissions, when this
-is the case.
+possible templates.
+
+``trafaret`` helps with grading, when this is the case.
 
 Using ``trafaret`` effectively requires you to be attentive: teachers readily
 undermine the creativity of their students, and pose overly liberal programming
