@@ -2,7 +2,7 @@ import pytest
 import re
 
 from trafaret import reutil
-from typing import Pattern
+from typing import Any, Pattern
 
 
 @pytest.fixture(scope='session')
@@ -17,6 +17,11 @@ class Token:
 
     def __repr__(self) -> str:
         return "({}: {})".format(self.offset, self.text)
+
+    def __eq__(self, other: Any) -> bool:
+        return isinstance(other, Token) and \
+            self.offset == other.offset and \
+            self.text == other.text
 
 
 def test_reutil(words: Pattern) -> None:
