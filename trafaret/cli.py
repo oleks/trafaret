@@ -9,8 +9,10 @@ from typing import IO
 def show(exercise: IO[str]) -> None:
     config = Config.load(exercise)
     text = config.text()
+    handout = config.handout()
     print(text)
     print()
+    print(handout)
 
 
 @click.group()

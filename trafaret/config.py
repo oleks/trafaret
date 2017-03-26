@@ -1,7 +1,8 @@
 import yaml
 
+from html import escape
+from trafaret.template import todo
 from typing import Dict, IO
-
 
 YamlType = Dict[str, str]
 
@@ -19,3 +20,8 @@ class Config:
 
     def raw_handout(self) -> str:
         return self.config['handout'].strip()
+
+    def handout(self) -> str:
+        html_format = "<div id='code'><pre id='editor'>{}</pre></div>"
+        html = escape(todo(self.raw_handout()))
+        return html_format.format(html)
