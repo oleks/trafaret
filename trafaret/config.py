@@ -1,14 +1,14 @@
 import yaml
 
 from html import escape
-from trafaret.template import todo
-from typing import Dict, IO
+from trafaret.template import todo, Templates, load_templates
+from typing import Any, Dict, IO
 
-YamlType = Dict[str, str]
+YamlConfig = Dict[str, Any]
 
 
 class Config:
-    def __init__(self, config: YamlType) -> None:
+    def __init__(self, config: YamlConfig) -> None:
         self.config = config
 
     @staticmethod
@@ -25,3 +25,6 @@ class Config:
         html_format = "<div id='code'><pre id='editor'>{}</pre></div>"
         html = escape(todo(self.raw_handout()))
         return html_format.format(html)
+
+    def templates(self) -> Templates:
+        return load_templates(self.config['templates'])

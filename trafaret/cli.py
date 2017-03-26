@@ -1,7 +1,8 @@
 import click
 
 from trafaret.config import Config
-from typing import IO
+from trafaret.solution import iter_solutions
+from typing import IO, Optional
 
 
 @click.command(
@@ -16,12 +17,25 @@ def show(exercise: IO[str]) -> None:
     print(handout)
 
 
+@click.command()
+@click.argument('exercise', type=click.File('r'))
+@click.option('--index', '-i', type=int)
+def solution(exercise: IO[str], index: Optional[int]) -> None:
+    config = Config.load(exercise)
+    solutions = list(iter_solutions(config))
+    if index:
+        solutions[index]
+    else:
+        print("\n---- OR ----\n".join(solutions))
+
+
 @click.group()
 def main() -> None:
     pass
 
 
 main.add_command(show)
+main.add_command(solution)
 
 if __name__ == "__main__":
     main()
