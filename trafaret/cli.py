@@ -4,7 +4,7 @@ from trafaret.config import Config
 from typing import IO
 
 
-@click.command()
+@click.command(help='Show the exercise text and code handout in Markdown format.')
 @click.argument('exercise', type=click.File('r'))
 def show(exercise: IO[str]) -> None:
     config = Config.load(exercise)
