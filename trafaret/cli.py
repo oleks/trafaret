@@ -6,9 +6,9 @@ from typing import IO, Optional
 
 
 @click.command(
-    help='Show the exercise text and code handout in Markdown format.')
+    help='Show the exercise text and code handout.')
 @click.argument('exercise', type=click.File('r'))
-def show(exercise: IO[str]) -> None:
+def markdown(exercise: IO[str]) -> None:
     config = Config.load(exercise)
     text = config.text()
     handout = config.handout()
@@ -35,7 +35,7 @@ def main() -> None:
     pass
 
 
-main.add_command(show)
+main.add_command(markdown)
 main.add_command(solution)
 
 if __name__ == "__main__":

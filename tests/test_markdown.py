@@ -23,7 +23,7 @@ def test_show(out_dirpath: str) -> None:
     md_path = os.path.join(data_dirpath, "PythonMax.md")
     out_path = os.path.join(out_dirpath, "PythonMax.md")
 
-    command = ["trafaret", "show", yaml_path]
+    command = ["trafaret", "markdown", yaml_path]
     output_to_file(command, out_path)
 
     subprocess.check_call(["diff", "-ru", md_path, out_path])
