@@ -17,7 +17,8 @@ def show(exercise: IO[str]) -> None:
     print(handout)
 
 
-@click.command()
+@click.command(
+    help='Show the solution(s).')
 @click.argument('exercise', type=click.File('r'))
 @click.option('--index', '-i', type=int)
 def solution(exercise: IO[str], index: Optional[int]) -> None:
