@@ -41,7 +41,7 @@ def solution(exercise: IO[str], index: Optional[int]) -> None:
 
 
 @click.group()
-@click.version_option(__version)
+@click.version_option(__version, message=r'%(version)s')
 def main() -> None:
     pass
 
