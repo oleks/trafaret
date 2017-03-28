@@ -20,6 +20,7 @@ class Lang:
 
 class CSharp(Lang):
     def __init__(self) -> None:
+        self.todo_comment = "// TODO"
         self.comment = re.compile(
             r'/\*.*?\*/|//.*?\n')
         self.string = re.compile(
@@ -28,8 +29,8 @@ class CSharp(Lang):
 
 class Python3(Lang):
     def __init__(self) -> None:
+        self.todo_comment = "# TODO"
         self.comment = re.compile(
             r'#.*?\n')
         self.string = re.compile(
             r'"([^\\]|\\[\\"])*?"|\'([^\\]|\\[\\\'])*?\'')
-
