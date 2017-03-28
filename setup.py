@@ -21,7 +21,7 @@ setup(
     keywords=["trafaret", "programming", "exercises", "teaching"],
     long_description=readsybling('README.rst'),
     url="https://github.com/oleks/trafaret",
-    version='version=0.3.0',
+    version='version=0.4.0',
     packages=find_packages(),
     maintainer="Oleks",
     maintainer_email="oleks@oleks.info",
