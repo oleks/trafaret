@@ -8,8 +8,8 @@ TemplateRegex = r'____([a-zA-Z0-9]+)'
 _TEMPLATE = re.compile(TemplateRegex)
 
 
-def todo(text: str) -> str:
-    return _TEMPLATE.sub('// TODO', text)
+def todo(todo_comment: str, text: str) -> str:
+    return _TEMPLATE.sub(todo_comment, text)
 
 
 YamlTemplate = Dict[str, Any]
