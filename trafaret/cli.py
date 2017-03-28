@@ -10,7 +10,7 @@ from typing import IO, Optional
 @click.argument('exercise', type=click.File('r'))
 def handout(exercise: IO[str]) -> None:
     config = Config.load(exercise)
-    handout = config.handout()
+    handout = config.todo_handout()
     print(handout)
 
 
