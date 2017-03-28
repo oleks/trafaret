@@ -1,3 +1,4 @@
+language: python3
 text: |
 
   # Implement `argmax` in Python
