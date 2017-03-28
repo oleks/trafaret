@@ -3,6 +3,7 @@ import re
 
 class Lang:
     def __init__(self) -> None:
+        self.todo_comment = ""
         pass
 
     def is_string(self, text: str) -> bool:
