@@ -18,12 +18,12 @@ class Config:
     def text(self) -> str:
         return self.config['text'].strip()
 
-    def raw_handout(self) -> str:
-        return self.config['handout'].strip()
-
     def handout(self) -> str:
+        return todo(self.config['handout'].strip())
+
+    def html_handout(self) -> str:
         html_format = "<div id='code'><pre id='editor'>{}</pre></div>"
-        html = escape(todo(self.raw_handout()))
+        html = escape(self.handout())
         return html_format.format(html)
 
     def templates(self) -> Templates:

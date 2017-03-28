@@ -6,12 +6,21 @@ from typing import IO, Optional
 
 
 @click.command(
+    help='Show the code handout.')
+@click.argument('exercise', type=click.File('r'))
+def handout(exercise: IO[str]) -> None:
+    config = Config.load(exercise)
+    handout = config.handout()
+    print(handout)
+
+
+@click.command(
     help='Show the exercise text and code handout.')
 @click.argument('exercise', type=click.File('r'))
 def markdown(exercise: IO[str]) -> None:
     config = Config.load(exercise)
     text = config.text()
-    handout = config.handout()
+    handout = config.html_handout()
     print(text)
     print()
     print(handout)
@@ -35,6 +44,7 @@ def main() -> None:
     pass
 
 
+main.add_command(handout)
 main.add_command(markdown)
 main.add_command(solution)
 
