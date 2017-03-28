@@ -1,5 +1,6 @@
 import click
 
+from trafaret import __version
 from trafaret.config import Config
 from trafaret.solution import iter_solutions
 from typing import IO, Optional
@@ -40,6 +41,7 @@ def solution(exercise: IO[str], index: Optional[int]) -> None:
 
 
 @click.group()
+@click.version_option(__version)
 def main() -> None:
     pass
 
