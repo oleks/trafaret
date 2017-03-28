@@ -7,4 +7,4 @@ Implement `argmax` in Python.
 A = TypeVar(&#x27;A&#x27;)
 
 def argmax(f: Callable[[A], int], xs: Iterable[A]) -&gt; int:
-    // TODO</pre></div>
+    # TODO</pre></div>
