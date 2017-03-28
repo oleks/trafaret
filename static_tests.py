@@ -17,7 +17,10 @@ def run(command: List[str]) -> None:
 
 files = ["static_tests.py", "trafaret", "tests"]
 
-run(["flake8"] + files)
+run([
+        "flake8",
+        "--exclude", "tests/data"
+    ] + files)
 run([
         "mypy",
         "--disallow-untyped-calls",
